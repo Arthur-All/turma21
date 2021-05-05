@@ -1,39 +1,47 @@
-package exercicios;
+package exemplos;
 
 import java.util.Scanner;
 
-public class OiMundo 
-{
-	public static void main(String [] args)
-	{
-		Scanner  leia = new Scanner(System.in);
-		
-		String nome;
-		int numero1 = 0;
-		int numero2 = 0;
+public class ExemploSe {
+
+	public static void main(String[] args) {
+
+		int ir;
 		double salario = 0;
-		char op = 'S';
+		boolean  emergencial, fralde, imposto;
+		String nome,masculino,F,O;;
+		char G;
+		
+		Scanner leia = new Scanner(System.in);
+		
+		System.out.println("Escreva seu nome:");
+		nome = leia.nextLine();
+		
+		System.out.println("Escreva seu genero:");
+		G = leia.nextLine().charAt(0);
+		
+		System.out.println("Seu salário:");
+		salario = leia.nextDouble();
 		
 		
-		System.out.println("Digite nome: ");
-		nome = leia.next();
+		if ((salario*12)<=60000) {
+			emergencial = true;
+			imposto = false;
+			
+			
+			if(M == true) {
+			 if(imposto == false) {
+				System.out.println("Isento do IR");
+			}else 
+				System.out.println("Pagar IR");
+				imposto = true;
+				emergencial = false;		
+		}
 		
-	//	System.out.println("oi mundo");
-		//System.out.println("Arthur r.A");
-		System.out.println("Soma:"+(numero1+numero2));
-		
-		System.out.println("Digite um numero: ");
-		numero1 = leia.nextInt();
-		
-		System.out.println("Digite numero 2: ");
-		numero2  = leia.nextInt();
 		
 		
-		System.out.println("nome: "+nome);
-		System.out.println(salario);
 		
-	
-		
+
 	}
 
 }
