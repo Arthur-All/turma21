@@ -6,9 +6,9 @@ public class OrdemCresente_2 {
 
 	public static void main(String[] args) {
 		
-		/*
-		 * 2- Faça um programa que entre com três números e coloque em ordem crescente.
-		 */
+		
+		 // 2- Faça um programa que entre com três números e coloque em ordem crescente.
+	
 		
 		Scanner leia = new Scanner(System.in);
 		
@@ -21,27 +21,27 @@ public class OrdemCresente_2 {
 		System.out.print("\nDigite o valor do numero 3: ");
 		c=leia.nextInt();
 		
-		if (a>b&&a>c&&b>c)
+		if (a>=b&&a>=c&&b>=c)
 		{
 			System.out.println("A ordem decresente eh: "+a+"/"+b+"/"+c);
 		}
-		else if(a>b && a>c && c>b)
+		else if(a>=b && a>=c && c>=b)
 		{
 			System.out.println("A ordem decresente eh: "+a+"/"+c+"/"+b);
 		}
-		else if(b>a && b>c && a>c)
+		else if(b>=a && b>=c && a>=c)
 		{
 			System.out.println("A ordem decresente eh: "+b+"/"+a+"/"+c);
 		}
-		else if(b>a && b>c && c>a)
+		else if(b>=a && b>=c && c>=a)
 		{
 			System.out.println("A ordem decresente eh: "+b+"/"+c+"/"+a);
 		}
-		else if(c>a && c>b && a>b)
+		else if(c>=a && c>=b && a>=b)
 		{
 			System.out.println("A ordem decresente eh: "+c+"/"+a+"/"+b);
 		}
-		else if(c>a && c>b && b>a)
+		else if(c>=a && c>=b && b>=a)
 		{
 			System.out.println("A ordem decresente eh: "+c+"/"+b+"/"+a);
 		}

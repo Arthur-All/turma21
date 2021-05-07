@@ -1,4 +1,4 @@
-package exemplos;
+/*package exemplos;
 
 import java.util.Scanner;
 
@@ -44,4 +44,4 @@ public class ExemploSe {
 
 	}
 
-}
+}*/
