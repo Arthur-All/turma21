@@ -3,7 +3,10 @@ package programa;
 import java.util.Locale;
 import java.util.Scanner;
 
+import Classes.Biologia;
+import Classes.Historia;
 import Classes.Matematica;
+import Classes.Portugues;
 import Classes.Quimica;
 
 public class ProgramaPrincipal {
@@ -14,21 +17,62 @@ public class ProgramaPrincipal {
 		System.out.println("PROGRAMA DE SUGESTÃO DE CARREIRA");
 		System.out.println("Aqui você encontrará sugestões de áreas à seguir profissionalmente considerando seu desempenho atual.");
 		
-		System.out.print("Insira a nota para Matematica: ");
-		double nota = leia.nextDouble();
-		System.out.print("Insira as faltas para Matematica: ");
-		int faltas = leia.nextInt();
+		char op = ' ';
+		do {
+			System.out.println();
+			System.out.println("1 - Português");
+		    System.out.println("2 - Matemática"); 
+		    System.out.println("3 - Quimica");
+		    System.out.println("4 - História");
+		    System.out.println("5 - Biologia");
+		    System.out.println("6 - Sair");
+		    System.out.print("Escolha para qual matéria você deseja visualizar seu engajamento, ou sair do programa: ");
+		    op = leia.next().charAt(0);
+		    System.out.println();
+		    
+		    double nota = 0.0;
+		    int faltas = 0;
+		    if(op != '6') {
+			    System.out.print("Insira a nota: ");
+				nota = leia.nextDouble();
+				System.out.print("Insira as faltas: ");
+				faltas = leia.nextInt();
+		    }
+		    
+		    System.out.println();
+		    switch (op) {
+		    	case '1':
+		    		Portugues por = new Portugues (nota,faltas);
+		    		por.imprimirListaSugestoes();
+		    		
+		    		break;
+		    	case '2':
+		    		Matematica mat = new Matematica(nota, faltas);
+		    		mat.imprimirListaSugestoes();
+		    		break;
+		    	case '3':
+		    		Quimica qui = new Quimica(nota,faltas);
+		    		qui.imprimirListaSugestoes();
+		    		break;
+		    	case '4':
+		    		Historia his = new Historia(nota,faltas);
+		    		his.imprimirListaSugestoes();
+		    		break;
+		    	case '5':
+		    		Biologia bio = new Biologia(nota,faltas);
+		    		bio.imprimirListaSugestoes();
+		    		break;
+		    	case '6':
+	
+		    		break;
+		    	default:
+		    		
+		    		break;
+		    }
+		    
+		} while (op != '6');
 		
-		Matematica mat = new Matematica(nota, faltas);
-		mat.imprimirListaSugestoes();
-		
-		System.out.print("Insira a nota em Quimica: ");
-		double nota = leia.nextDouble();
-		System.out.print("Insira as faltas em Quimica: ");
-		int faltas = leia.nextInt();
-		
-		Quimica qui = new Quimica(nota, faltas);
-		qui.imprimirListaSugestoes();
+		System.out.println("FIM DE PROGRAMA.");
 		
 		leia.close();
 	}
