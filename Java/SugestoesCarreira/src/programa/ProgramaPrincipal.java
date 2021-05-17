@@ -101,6 +101,7 @@ public class ProgramaPrincipal {
 		    	System.out.print("      De (1) ah (5): ");
 		    	op2  = leia.next().charAt(0);
 		    	System.out.println();
+		    	
 		    	Materia bla;//polimorfismo foda para caralhooo!!
 		    	if(op == '1' ) {
 		    		bla= new Portugues(nota,faltas,op2);
