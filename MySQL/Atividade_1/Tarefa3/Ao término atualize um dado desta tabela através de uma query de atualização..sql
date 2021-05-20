@@ -1,0 +1,1 @@
+update tb_alunes set nota = 6 where id = 1;

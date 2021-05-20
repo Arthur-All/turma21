@@ -1,0 +1,1 @@
+update tb_funcionario set nome = "Art" where id = 1;
